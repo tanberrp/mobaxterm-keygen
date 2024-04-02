@@ -1,0 +1,31 @@
+# github.com/go-logr/logr v1.3.0
+## explicit; go 1.18
+github.com/go-logr/logr
+github.com/go-logr/logr/slogr
+# github.com/inconshreveable/mousetrap v1.1.0
+## explicit; go 1.18
+github.com/inconshreveable/mousetrap
+# github.com/spf13/cobra v1.8.0
+## explicit; go 1.15
+github.com/spf13/cobra
+# github.com/spf13/pflag v1.0.5
+## explicit; go 1.12
+github.com/spf13/pflag
+# k8s.io/apimachinery v0.29.3
+## explicit; go 1.21
+k8s.io/apimachinery/pkg/util/errors
+k8s.io/apimachinery/pkg/util/rand
+k8s.io/apimachinery/pkg/util/sets
+k8s.io/apimachinery/pkg/util/validation/field
+# k8s.io/component-base v0.29.3
+## explicit; go 1.21
+k8s.io/component-base/cli/flag
+# k8s.io/klog/v2 v2.110.1
+## explicit; go 1.13
+k8s.io/klog/v2
+k8s.io/klog/v2/internal/buffer
+k8s.io/klog/v2/internal/clock
+k8s.io/klog/v2/internal/dbg
+k8s.io/klog/v2/internal/serialize
+k8s.io/klog/v2/internal/severity
+k8s.io/klog/v2/internal/sloghandler
