@@ -23,9 +23,9 @@ import (
 )
 
 type Options struct {
-	UserName  string
-	Version   string
-	OutputDir string
+	UserName     string
+	Version      string
+	MobaxtermDir string
 }
 
 func NewOptions() *Options {
@@ -58,15 +58,15 @@ func (o *Options) validateVersion() *field.Error {
 	return nil
 }
 func (o *Options) validateOutputDir() *field.Error {
-	if o.OutputDir == "" {
-		return field.Required(field.NewPath("--output-dir"), "")
+	if o.MobaxtermDir == "" {
+		return field.Required(field.NewPath("--mobaxterm-dir"), "")
 	}
-	dir, err := os.Stat(o.OutputDir)
+	dir, err := os.Stat(o.MobaxtermDir)
 	if err != nil {
-		return field.Invalid(field.NewPath("--output-dir"), o.OutputDir, err.Error())
+		return field.Invalid(field.NewPath("--mobaxterm-dir"), o.MobaxtermDir, err.Error())
 	}
 	if !dir.IsDir() {
-		return field.Invalid(field.NewPath("--output-dir"), o.OutputDir, "is not dir")
+		return field.Invalid(field.NewPath("--mobaxterm-dir"), o.MobaxtermDir, "is not dir")
 	}
 	return nil
 }
