@@ -45,7 +45,7 @@ func NewMobaXtermKeygenCommand() *cobra.Command {
 	flags := cmd.Flags()
 	flags.StringVar(&o.UserName, "username", "", "The user name to licensed, like: tanber")
 	flags.StringVar(&o.Version, "version", "", "The version of MobaXterm, like: 23.5")
-	flags.StringVar(&o.OutputDir, "output-dir", "", "The dir of key file write into, like: /tmp")
+	flags.StringVar(&o.MobaxtermDir, "mobaxterm-dir", "", "The dir of mobaxterm has installed, like: ~/MobaXterm_Portable_V23.5")
 	return cmd
 }
 
@@ -55,7 +55,7 @@ func run(o *Options) error {
 		return err
 	}
 	license := generateLicense(1, 1, o.UserName, major, minor)
-	fileName := path.Join(o.OutputDir, "Custom.mxtpro")
+	fileName := path.Join(o.MobaxtermDir, "Custom.mxtpro")
 	_ = os.Remove(fileName)
 	f, err := os.Create(fileName)
 	if err != nil {
