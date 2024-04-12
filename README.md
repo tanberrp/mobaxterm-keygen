@@ -9,7 +9,7 @@ Mobaxterm-keygen is a build cil tool used to solve the upper limit of mobaxterm 
 
 + If you have golang environment, you can download with go install:
   ```shell
-  go install github.com/tanberrp/mobaxterm-keygen/cmd/mobaxterm-keygen@latest
+  go install github.com/tanberrp/mobaxterm-keygen/cmd/mobaxterm-keygen@v1.0.0
   ```
   
 ### Generate MobaXterm key
